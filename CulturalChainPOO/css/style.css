@@ -1,0 +1,29 @@
+.contenedor{
+    background-color: gray;
+    width: 20%;
+    margin-left: 25px;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.contenedor>img{
+    width: 60%;
+    margin: 0px auto;
+    display: block;
+}
+.contenedor>h1{
+    margin: auto;
+    text-align: center;
+}
+.contenedor>.botones{
+    display: flex;
+    flex-direction: left;
+}
+.contenedor>.botones>a{
+    margin:auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
