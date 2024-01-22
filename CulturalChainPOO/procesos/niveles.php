@@ -2,7 +2,6 @@
 require_once "../conexion/conexion.php";
 class Niveles{
     private $conexion;
-    public $mensajeerror;
     function __construct(){
         $claseconexion = new Conexion();
         $this->conexion= $claseconexion->conexion;
