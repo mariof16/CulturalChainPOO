@@ -6,12 +6,6 @@
     <title>Crear Nivel</title>
 </head>
 <body>
-    <?php
-        require "niveles.php";
-        $niveles= new Niveles;
-        if(isset($_GET["error"]))
-            echo "<h1>Error: ".$_GET["error"]."</h1>"
-    ?>
     <form action="../procesos/gestionniveles.php" method="post" enctype="multipart/form-data">
         <p>Nombre País</p>
         <input type="text" name="nombre">
