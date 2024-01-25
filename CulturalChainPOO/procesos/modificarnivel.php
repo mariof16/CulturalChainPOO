@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <h1><?php
+        if(isset($_GET["error"])){
+            echo "Error: ".$_GET["error"];
+        }
+    ?></h1>
+    <a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
     <?php
         require "niveles.php";
         $niveles= new Niveles;
@@ -21,6 +27,6 @@
         <input type="submit" name="modificar">
         <input type="hidden" name="id" value="<?php echo $_GET["id"]?>">
     </form>
-    <a href="../procesos/listarniveles.php">Atras</a><br>
+    
 </body>
 </html>

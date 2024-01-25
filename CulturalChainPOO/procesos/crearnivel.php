@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <a href="niveles.html">Atras</a><br>
-    <form action="../procesos/gestionniveles.php" method="post" enctype="multipart/form-data">
+    <a href="../html/niveles.html" class="atras">Atras</a><br>
+    <h1 class="error"><?php
+        if(isset($_GET["error"])){
+            echo "Error: ".$_GET["error"];
+        }
+    ?></h1>
+    <form action="gestionniveles.php" method="post" enctype="multipart/form-data">
         <p>Nombre País</p>
         <input type="text" name="nombre">
         <p>Imagen</p>

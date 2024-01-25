@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<a href="../procesos/listarniveles.php">Atras</a><br>
+<a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
     <?php
         require "niveles.php";
         $niveles= new Niveles;
         echo "<h1>Borrar: ".$_GET["nombrepais"]."</h1>"
     ?>
-    <form action="../procesos/gestionniveles.php" method="post" enctype="multipart/form-data">   
-        <input type="submit" name="si" value="Si">
-        <input type="submit" name="no" value="No">
+    <form action="../procesos/gestionniveles.php" method="post" enctype="multipart/form-data" class="borrado">   
+        <div>
+            <input type="submit" name="si" value="Si">
+            <input type="submit" name="no" value="No">
+        </div>
         <input type="hidden" name="id" value="<?php echo $_GET["id"]?>">
     </form>
 </body>

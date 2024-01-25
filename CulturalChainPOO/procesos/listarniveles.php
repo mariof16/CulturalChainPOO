@@ -6,10 +6,10 @@
     <title>Listar Niveles</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body id="listado">
     <h1>Listado de niveles</h1>
-    <a href="../html/niveles.html">Atras</a><br>
-    <?php
+    <a href="../html/niveles.html" class="atras">Atras</a><br>
+    <div id="contenidolistado"><?php
         require "niveles.php";
         $niveles= new Niveles;
         
@@ -27,5 +27,6 @@
             echo "<br>";
         }
     ?>
+    </div>
 </body>
 </html>

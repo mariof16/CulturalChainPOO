@@ -3,12 +3,20 @@ require "niveles.php";
 
 $niveles= new Niveles;
 if(isset($_POST["crear"])){
-    $niveles->crear();
-    header("Location: listarniveles.php");
+    $error=$niveles->crear();
+    if($error){
+        header("Location: crearnivel.php?error=$error");
+    }else{
+        header("Location: listarniveles.php");
+    }
 }
 if(isset($_POST["modificar"])){
     $niveles->modificar();
-    header("Location: listarniveles.php");
+    if($error){
+        header("Location: modificarnivel.php?error=$error");
+    }else{
+        header("Location: listarniveles.php");
+    }
 }
 if(isset($_POST["si"]))
 {
