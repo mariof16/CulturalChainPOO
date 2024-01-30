@@ -11,9 +11,11 @@ if(isset($_POST["crear"])){
     }
 }
 if(isset($_POST["modificar"])){
-    $niveles->modificar();
+    $error=$niveles->modificar();
+    $id=$_GET["id"];
+    $nombrepais=$_GET["nombrepais"];
     if($error){
-        header("Location: modificarnivel.php?error=$error");
+        header("Location: modificarnivel.php?error=$error&nombrepais=$nombrepais&id=$id");
     }else{
         header("Location: listarniveles.php");
     }

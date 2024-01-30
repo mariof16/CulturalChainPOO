@@ -28,9 +28,21 @@ class Niveles{
 
         $id=$_POST["id"];
         
-        $imagen=file_get_contents($_FILES["imagen"]["tmp_name"]);
-
-        $this->consultas->modificar($nombrepais,$imagen,$id);
+        if($_FILES["imagen"]['error'] == UPLOAD_ERR_OK){
+            $imagen=file_get_contents($_FILES["imagen"]["tmp_name"]);
+        }else{
+            $imagen=null;
+        }
+        try{
+            $this->consultas->modificar($nombrepais,$imagen,$id);
+        }
+        catch(Exception $e){
+            if($e->getCode()==1406){
+                return "Nombre demasiado largo";
+            }else{
+                return "Error al añadir";
+            }
+        }
     }
     public function listar(){
         return $this->consultas->listar();

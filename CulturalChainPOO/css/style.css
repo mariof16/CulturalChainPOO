@@ -79,8 +79,18 @@ form{
 }
 .borrado>div{
    width: 100%;
+   display: flex;
+   flex-direction: left;
+   justify-content: space-around;
 }
-.borrado>div>button{
-    display: flex;
-    flex-direction: left;
+.borrado>div>input{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    display:block;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #222222;
+    color: white;
 }
