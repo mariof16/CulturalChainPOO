@@ -1,3 +1,8 @@
+<?php
+    include "gestionniveles.php";
+    $gestion = new GestionNiveles;
+    $resultado=$gestion->listar();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +15,6 @@
     <h1>Listado de niveles</h1>
     <a href="../html/niveles.html" class="atras">Atras</a><br>
     <div id="contenidolistado"><?php
-        require "niveles.php";
-        $niveles= new Niveles;
-        
-        $resultado=$niveles->listar();
         foreach($resultado as $fila){
             echo "<div class='contenedor'>";
             echo "<h1>".$fila["nombrepais"]."</h1>";

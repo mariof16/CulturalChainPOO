@@ -17,7 +17,7 @@ class ConsultasNiveles {
         
         $query="UPDATE Nivel SET nombrepais = '$nombrepais'";
 
-        if($_FILES['imagen']['tmp_name'] != null){
+        if($imagen != null){
             $imagen=$this->conexion->real_escape_string($imagen);
             $query.=",imagen = '$imagen'";
         }

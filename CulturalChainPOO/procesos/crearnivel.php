@@ -1,3 +1,8 @@
+<?php
+    include "gestionniveles.php";
+    $gestion = new GestionNiveles;
+    $gestion->crearnivel();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +14,11 @@
 <body>
     <a href="../html/niveles.html" class="atras">Atras</a><br>
     <h1 class="error"><?php
-        if(isset($_GET["error"])){
-            echo "Error: ".$_GET["error"];
+        if(isset($error)){
+            echo "Error: ".$error;
         }
     ?></h1>
-    <form action="gestionniveles.php" method="post" enctype="multipart/form-data">
+    <form action="crearnivel.php" method="post" enctype="multipart/form-data">
         <p>Nombre País</p>
         <input type="text" name="nombre">
         <p>Imagen</p>

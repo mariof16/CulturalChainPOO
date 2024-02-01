@@ -1,31 +1,27 @@
 <?php
 require "niveles.php";
-
-$niveles= new Niveles;
-if(isset($_POST["crear"])){
-    $error=$niveles->crear();
-    if($error){
-        header("Location: crearnivel.php?error=$error");
-    }else{
-        header("Location: listarniveles.php");
+class GestionNiveles {
+    private $niveles;
+    function __construct(){
+        $this->niveles= new Niveles;
     }
-}
-if(isset($_POST["modificar"])){
-    $error=$niveles->modificar();
-    $id=$_GET["id"];
-    $nombrepais=$_GET["nombrepais"];
-    if($error){
-        header("Location: modificarnivel.php?error=$error&nombrepais=$nombrepais&id=$id");
-    }else{
-        header("Location: listarniveles.php");
+    function modificarnivel(){
+        if(isset($_POST["modificar"])){
+            $error=$this->niveles->modificar();
+            if(!$error){
+                header("Location: listarniveles.php");
+            }
+        }
     }
-}
-if(isset($_POST["si"]))
-{
-    $niveles->borrar($_POST["id"]);
-    header("Location: listarniveles.php");
-}
-if(isset($_POST["no"]))
-{
-    header("Location: listarniveles.php");
+    function crearnivel(){
+        if(isset($_POST["crear"])){
+            $error=$this->niveles->crear();
+            if(!$error){
+                header("Location: listarniveles.php");
+            }
+        }
+    }
+    function listar(){
+        return $this->niveles->listar();
+    }
 }

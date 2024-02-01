@@ -1,3 +1,8 @@
+<?php
+    include "gestionniveles.php";
+    $gestion = new GestionNiveles;
+    $gestion->modificarnivel();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,23 +14,21 @@
 <body>
     <a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
     <?php
-        require "niveles.php";
-        $niveles= new Niveles;
         echo "<h1>".$_GET["nombrepais"]."</h1>"
     ?>
     <h1 class="error"><?php
-        if(isset($_GET["error"])){
-            echo "Error: ".$_GET["error"];
+        if(isset($error)){
+            echo "Error: ".$error;
         }
     ?></h1>
-    <form action="../procesos/gestionniveles.php?nombrepais=<?php echo $_GET["nombrepais"]?>&id=<?php echo $_GET["id"]?>" method="post" enctype="multipart/form-data">
+    <form action="modificarnivel.php?nombrepais=<?php echo $_GET["nombrepais"];?>&id=<?php echo $_GET["id"];?>" method="post" enctype="multipart/form-data">
         <p>Nombre</p>
-        <input type="text" name="nombre" value="<?php echo $_GET["nombrepais"]?>">
+        <input type="text" name="nombre" value="<?php echo $_GET["nombrepais"];?>">
         <p>Imagen</p>
         <input type="file" name="imagen">
         <br>
         <input type="submit" name="modificar">
-        <input type="hidden" name="id" value="<?php echo $_GET["id"]?>">
+        <input type="hidden" name="id" value="<?php echo $_GET["id"];?>">
     </form>
     
 </body>
