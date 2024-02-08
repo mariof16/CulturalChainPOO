@@ -1,7 +1,7 @@
 <?php
     include "gestionniveles.php";
-    $gestion = new GestionNiveles;
-    $resultado=$gestion->listar();
+    $controlador = new GestionNiveles;
+    $resultado=$controlador->listar();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@
             echo "<br>";
             echo "<div class='botones'>";
             echo "<a href='modificarnivel.php?id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Modificar</a><br>";
-            echo "<a href='borrarnivel.php?id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."&borrar=0'>Borrar</a><br>";
+            echo "<a href='borrarnivel.php?id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Borrar</a><br>";
             echo "</div>";
             echo "</div>";
             echo "<br>";

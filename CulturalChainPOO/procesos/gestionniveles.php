@@ -3,21 +3,22 @@
 require "niveles.php";
 class GestionNiveles {
     private $niveles;
+    public $error;
     function __construct(){
         $this->niveles= new Niveles;
     }
     function modificarnivel(){
         if(isset($_POST["modificar"])){
-            $error=$this->niveles->modificar();
-            if(!$error){
+            $this->error=$this->niveles->modificar();
+            if(!$this->error){
                 header("Location: listarniveles.php");
             }
         }
     }
     function crearnivel(){
         if(isset($_POST["crear"])){
-            $error=$this->niveles->crear();
-            if(!$error){
+            $this->error=$this->niveles->crear();
+            if(!$this->error){
                 header("Location: listarniveles.php");
             }
         }
