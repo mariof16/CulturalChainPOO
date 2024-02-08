@@ -1,4 +1,5 @@
 <?php
+//Controlador de niveles
 require "niveles.php";
 class GestionNiveles {
     private $niveles;

@@ -1,4 +1,5 @@
 <?php
+//Controlador que hace la validación y llama al modelo
 require_once "consultasniveles.php";
 class Niveles{
     private $consultas;
