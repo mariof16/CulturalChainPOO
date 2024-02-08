@@ -1,3 +1,8 @@
+<?php
+    include "gestionniveles.php";
+    $gestion = new GestionNiveles;
+    $gestion->borrar();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +14,9 @@
 <body>
 <a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
     <?php
-        require "niveles.php";
-        $niveles= new Niveles;
         echo "<h1>Borrar: ".$_GET["nombrepais"]."</h1>"
     ?>
-    <form action="../procesos/gestionniveles.php" method="post" enctype="multipart/form-data" class="borrado">   
+    <form action="../procesos/borrarnivel.php?nombrepais="<?php echo $_GET["nombrepais"] ?> method="post" enctype="multipart/form-data" class="borrado">   
         <div>
             <input type="submit" name="si" value="Si">
             <input type="submit" name="no" value="No">

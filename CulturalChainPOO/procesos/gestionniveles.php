@@ -24,4 +24,13 @@ class GestionNiveles {
     function listar(){
         return $this->niveles->listar();
     }
+    function borrar(){
+        if(isset($_POST["si"])){
+            $this->niveles->borrar($_POST["id"]);
+            header("Location: listarniveles.php");
+        }
+        if(isset($_POST["no"])){
+            header("Location: listarniveles.php");
+        }
+    }
 }
