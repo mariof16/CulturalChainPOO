@@ -1,7 +1,7 @@
 <?php
 //Lo que seria el modelo
 require_once "../conexion/conexion.php";
-class ConsultasNiveles {
+class ModeloNiveles {
     private $conexion;
     function __construct(){
         $claseconexion = new Conexion();

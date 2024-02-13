@@ -1,8 +1,3 @@
-<?php
-    include "gestionniveles.php";
-    $controlador = new GestionNiveles;
-    $controlador->modificarnivel();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +16,7 @@
             echo "Error: ".$controlador->error;
         }
     ?></h1>
-    <form action="modificarnivel.php?nombrepais=<?php echo $_GET["nombrepais"];?>&id=<?php echo $_GET["id"];?>" method="post" enctype="multipart/form-data">
+    <form action="index.php?accion=modificarnivel&controlador=controladorniveles&nombrepais=<?php echo $_GET["nombrepais"];?>&id=<?php echo $_GET["id"];?>" method="post" enctype="multipart/form-data">
         <p>Nombre</p>
         <input type="text" name="nombre" value="<?php echo $_GET["nombrepais"];?>">
         <p>Imagen</p>

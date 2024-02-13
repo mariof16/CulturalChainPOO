@@ -1,8 +1,3 @@
-<?php
-    include "gestionniveles.php";
-    $controlador = new GestionNiveles;
-    $resultado=$controlador->listar();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +16,8 @@
             echo "<br><img src='data:image/png;base64,".base64_encode($fila['imagen'])."'>";
             echo "<br>";
             echo "<div class='botones'>";
-            echo "<a href='modificarnivel.php?id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Modificar</a><br>";
-            echo "<a href='borrarnivel.php?id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Borrar</a><br>";
+            echo "<a href='index.php?accion=modificarnivel&controlador=controladorniveles&id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Modificar</a><br>";
+            echo "<a href='index.php?accion=borrar&controlador=controladorniveles&id=".$fila["id"]."&nombrepais=".$fila["nombrepais"]."'>Borrar</a><br>";
             echo "</div>";
             echo "</div>";
             echo "<br>";

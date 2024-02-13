@@ -1,8 +1,3 @@
-<?php
-    include "gestionniveles.php";
-    $controlador = new GestionNiveles;
-    $controlador->crearnivel();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +13,7 @@
             echo "Error: ".$controlador->error;
         }
     ?></h1>
-    <form action="crearnivel.php" method="post" enctype="multipart/form-data">
+    <form action="index.php?accion=crearnivel&controlador=controladorniveles" method="post" enctype="multipart/form-data">
         <p>Nombre País</p>
         <input type="text" name="nombre">
         <p>Imagen</p>
