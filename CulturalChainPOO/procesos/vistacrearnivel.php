@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <a href="../html/niveles.html" class="atras">Atras</a><br>
+    <a href="index.php?accion=menu&controlador=controladorniveles" class="atras">Atras</a><br>
     <h1 class="error"><?php
         if(isset($controlador->error)){
             echo "Error: ".$controlador->error;

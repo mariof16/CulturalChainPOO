@@ -8,7 +8,7 @@
 </head>
 <body id="listado">
     <h1>Listado de niveles</h1>
-    <a href="../html/niveles.html" class="atras">Atras</a><br>
+    <a href="index.php?accion=menu&controlador=controladorniveles" class="atras">Atras</a><br>
     <div id="contenidolistado"><?php
         foreach($resultado as $fila){
             echo "<div class='contenedor'>";

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
+    <a href="index.php?accion=menu&controlador=controladorniveles" class="atras">Atras</a><br>
     <?php
         echo "<h1>".$_GET["nombrepais"]."</h1>"
     ?>

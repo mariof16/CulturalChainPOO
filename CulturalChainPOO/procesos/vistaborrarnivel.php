@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<a href="../procesos/listarniveles.php" class="atras">Atras</a><br>
+    <a href="../procesos/index.php?accion=listar&controlador=controladorniveles">Listar</a><br>
     <?php
         echo "<h1>Borrar: ".$_GET["nombrepais"]."</h1>"
     ?>

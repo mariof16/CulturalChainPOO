@@ -66,6 +66,9 @@ class ControladorNiveles {
         $this->vista='vistalistarniveles';
         return $this->modelo->listar();
     }
+    function menu(){
+        $this->vista='vistaniveles';
+    }
     function borrar(){
         $this->vista='vistaborrarnivel';
         if(isset($_POST["si"])){
